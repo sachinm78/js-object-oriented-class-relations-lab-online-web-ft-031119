@@ -44,3 +44,23 @@ class Passenger {
   }
 }
 
+class Trip {
+  constructor(name) {
+    this.name = name
+    this.id = 
+    this.id = passengerId++
+    store.passengers.push(this)
+  }
+  
+  trips() {
+    return store.trips.filter(trip => {
+      return trip.passengerId == this.id
+    })
+  }
+  
+  passengers() {
+    return this.trips().map(trip => {
+      return trip.driver()
+    })
+  }
+}
