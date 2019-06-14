@@ -46,21 +46,18 @@ class Passenger {
 
 class Trip {
   constructor(driver, passenger) {
-    this.name = name
-    this.driverId = driverId++
-    this.passengerId = passengerId++
+    this.driverId = driver.id
+    this.passengerId = passenger.id
     this.id = tripId++
     store.trips.push(this)
   }
-  
   driver() {
     return store.drivers.find(driver => {
       return driver.id === this.driverId
     })
   }
-  
-  passengers() {
-    return store.passengers.find(driver => {
+  passenger() {
+    return store.passengers.find(passenger => {
       return passenger.id === this.passengerId
     })
   }
