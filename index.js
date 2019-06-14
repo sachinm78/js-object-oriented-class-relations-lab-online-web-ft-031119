@@ -53,7 +53,7 @@ class Trip {
     store.trips.push(this)
   }
   
-  trips() {
+  driver() {
     return store.trips.filter(trip => {
       return trip.passengerId == this.id
     })
