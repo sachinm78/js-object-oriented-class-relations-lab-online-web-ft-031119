@@ -54,14 +54,14 @@ class Trip {
   }
   
   driver() {
-    return store.trips.filter(trip => {
-      return trip.passengerId == this.id
+    return store.drivers.find(driver => {
+      return driver.id === this.driverId
     })
   }
   
   passengers() {
-    return this.trips().map(trip => {
-      return trip.driver()
+    return store.passengers.find(driver => {
+      return passenger.id === this.passengerId
     })
   }
 }
